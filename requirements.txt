@@ -1,0 +1,6 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+yandex-cloud-ml-sdk==0.14.0
+python-dotenv==1.0.0
+python-multipart==0.0.20
+jinja2==3.1.2
