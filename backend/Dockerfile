@@ -2,6 +2,16 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
+# Установите системные зависимости для сборки
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    python3-dev \
+    gcc \
+    make \
+    && rm -rf /var/lib/apt/lists/*
+
 # Копируем зависимости и устанавливаем их
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
